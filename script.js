@@ -109,3 +109,20 @@ window.addEventListener("click", (e) => {
         resumeModal.style.display = "none";
     }
 });
+const bookhavenCard = document.getElementById("bookhaven-card");
+const bookhavenModal = document.getElementById("bookhavenModal");
+const closeBookhaven = document.getElementById("closeBookhaven");
+
+bookhavenCard.addEventListener("click", () => {
+    bookhavenModal.style.display = "flex";
+});
+
+closeBookhaven.addEventListener("click", () => {
+    bookhavenModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if (e.target === bookhavenModal) {
+        bookhavenModal.style.display = "none";
+    }
+});
