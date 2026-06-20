@@ -92,3 +92,20 @@ topBtn.addEventListener("click", () => {
         behavior: "smooth"
     });
 });
+const resumeBtn = document.getElementById("resumeBtn");
+const resumeModal = document.getElementById("resumeModal");
+const closeResume = document.getElementById("closeResume");
+
+resumeBtn.addEventListener("click", () => {
+    resumeModal.style.display = "flex";
+});
+
+closeResume.addEventListener("click", () => {
+    resumeModal.style.display = "none";
+});
+
+window.addEventListener("click", (e) => {
+    if(e.target === resumeModal){
+        resumeModal.style.display = "none";
+    }
+});
