@@ -258,24 +258,41 @@
             </div>
         </div>
 
-        <!-- Coming Soon -->
-        <div class="project-card">
-            <h3>🚀 Coming Soon</h3>
+        <!-- LipiKey -->
+<div class="project-card lipikey-card">
 
-            <p>
-                Currently working on new real-world projects to
-                expand my portfolio and strengthen my development skills.
-            </p>
+    <h3>🔐 LipiKey</h3>
 
-            <div class="tech-stack">
-                <span>In Progress</span>
-            </div>
+    <p>
+        A full-stack memorable PIN generator that transforms
+        familiar English words into Devanagari variations and
+        personalized numeric PINs.
+    </p>
 
-            <div class="project-buttons">
-                <a href="#" class="project-btn">Coming Soon</a>
-            </div>
-        </div>
+    <div class="tech-stack">
+        <span>Python</span>
+        <span>Flask</span>
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+    </div>
 
+    <div class="lipikey-gallery">
+    <img src="assets/images/lipikey-home.png"
+         alt="LipiKey homepage"
+         onclick="openLipiKeyImage(this.src)">
+
+    <img src="assets/images/lipikey-result.png"
+         alt="LipiKey generated PIN results"
+         onclick="openLipiKeyImage(this.src)">
+</div>
+
+    <div class="project-buttons">
+        <a href="#" class="project-btn">GitHub</a>
+        <a href="#" class="project-btn">Project Details</a>
+    </div>
+
+</div>
     </div>
 
 </section>
@@ -408,7 +425,16 @@
     </div>
 
 </div>
+<!-- LIPIKEY IMAGE PREVIEW -->
+<div id="lipikeyLightbox" class="lipikey-lightbox"
+     onclick="closeLipiKeyImage()">
 
+    <span class="lipikey-close">&times;</span>
+
+    <img id="lipikeyPreview" src="" alt="LipiKey preview"
+         onclick="event.stopPropagation()">
+
+</div>
 <script src="script.js"></script>
 
 </body>

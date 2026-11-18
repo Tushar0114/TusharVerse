@@ -126,3 +126,23 @@ window.addEventListener("click", (e) => {
         bookhavenModal.style.display = "none";
     }
 });
+function openLipiKeyImage(imageSrc) {
+    const lightbox = document.getElementById("lipikeyLightbox");
+    const preview = document.getElementById("lipikeyPreview");
+
+    preview.src = imageSrc;
+    lightbox.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeLipiKeyImage() {
+    const lightbox = document.getElementById("lipikeyLightbox");
+
+    lightbox.classList.remove("active");
+    document.body.style.overflow = "";
+}
+document.addEventListener("keydown", function(event) {
+    if (event.key === "Escape") {
+        closeLipiKeyImage();
+    }
+});
